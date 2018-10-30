@@ -6,7 +6,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../style/main.scss';
 
-const getUrlForLink = (name, links) => links.find(link => link.name === name).url;
+const getUrlForLink = (name, links) => {
+    const matchingLink = links.find(link => link.name === name);
+    return matchingLink && matchingLink.url;
+};
 
 export default function Layout({ children, data }) {
     const {
@@ -16,7 +19,7 @@ export default function Layout({ children, data }) {
     return (
         <div>
             <Helmet
-                title={title}
+                title={name}
                 meta={[
                     { name: 'description', content: description },
                     { name: 'keywords', content },

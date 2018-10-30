@@ -10,6 +10,7 @@ class Contact extends React.Component {
     render() {
         return (
             <div className="contact" id="contact">
+                <div className="image" />
                 <div className="content">
                     <h1 className="contact-title title">
                         {this.title}
