@@ -1,7 +1,71 @@
 #description-0 {
-    background-image: url('../images/02.jpg');
+    background-color: white;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-image {
+        background-image: url('../images/description/0.jpg');
+        background-size: cover;
+        width: inherit;
+        margin: 80px;
+        margin-right: 0;
+    }
+
+    .content-text {
+        @include center-content;
+        margin: 20px;
+    }
 }
 
 #description-1 {
+    display: flex;
+    color: white;
+}
+
+#description-1 .image {
     background-image: url('../images/03.jpg');
+    height: inherit;
+    width: 100%;
+    position: absolute;
+}
+
+#description-1 .content {
+    @include center-content;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#description-1-title {
+    font-size: 60px;
+}
+
+#description-1-text {
+    font-size: 20px;
+}
+
+#description-1 .content-text {
+    @include center-content;
+    height: inherit;
+    background-color: black;
+    margin-top: 10%;
+    padding: 0 15%;
+}
+
+@media screen and (max-width: 700px) {
+    #description-0 .content-image {
+        background-image: none;
+        width: 0;
+        margin: 0;
+    }
+
+    #description-1 .content-text {
+        background-color: transparent;
+    }
 }

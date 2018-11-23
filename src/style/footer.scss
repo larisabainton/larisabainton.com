@@ -1,10 +1,28 @@
 .footer {
-    text-align: center;
-    background-color: #39454b;
-    color: rgba(185, 186, 187, 0.5);
+    display:flex;
+    align-items: center;
+    background-color: #617d78;
+    color: #c9c9c9;
     padding: 30px;
+
+    a:link,
+    a:visited,
+    a:active {
+        color: #c9c9c9;;
+    }
 }
 
 .social-media {
     font-size: 25px;
+    padding: 0 5px;
+}
+
+.footer-copyright {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.footer-copyright-icon {
+    padding-right: 5px;
 }

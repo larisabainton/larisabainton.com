@@ -8,12 +8,15 @@ import {
     faLinkedinIn,
     faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../style/main.scss';
 
-library.add(faTwitter, faFacebookF, faLinkedinIn, faInstagram);
+library.add(faTwitter, faFacebookF, faLinkedinIn, faInstagram, faCopyright);
+
+const getSection = (name, sections) => sections.find(section => section.name === name);
 
 const getUrlForLink = (name, links) => {
     const matchingLink = links.find(link => link.name === name);
@@ -22,7 +25,7 @@ const getUrlForLink = (name, links) => {
 
 export default function Layout({ children, data }) {
     const {
-        title, name, description, content, descriptions, links,
+        title, name, description, content, descriptions, links, sections,
     } = data.site.siteMetadata;
 
     return (
@@ -37,6 +40,8 @@ export default function Layout({ children, data }) {
             <Header
                 siteTitle={title}
                 titles={descriptions.map(desc => desc.headerTitle)}
+                galleryTitle={getSection('gallery', sections).headerTitle}
+                contactTitle={getSection('contact', sections).headerTitle}
             />
             <div className="body">
                 {children()}
@@ -81,6 +86,10 @@ export const query = graphql`
         name
         description
         content
+        sections {
+            name
+            headerTitle
+        }
         links {
           name
           url
