@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100|Montserrat');
+
+$roboto: 'Roboto', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+@import 'mixins';
+@import 'transitions';
+
 @import 'contact';
 @import 'description';
 @import 'gallery';
 @import 'footer';
 @import 'header';
 @import 'intro';
-@import 'transitions';
 
 body {
    margin: 0;
-   font-family: 'Titillium Web', sans-serif;
+   font-family: $montserrat;
 
     a {
         text-decoration: none;
@@ -16,12 +23,11 @@ body {
 }
 
 .title {
-    font-family: 'Amaranth', sans-serif;
-    font-weight: bold;
+    font-family: $roboto;
 }
 
 h1 {
-    margin: 0;
+    margin: 5%;
 }
 
 .intro,
@@ -30,12 +36,23 @@ h1 {
 .contact {
     height: 99vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    align-items: center;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.description,
+.gallery,
+.contact {
+    justify-content: center;
 }
 
 a:link,
