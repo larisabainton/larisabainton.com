@@ -32,8 +32,14 @@ class Footer extends React.Component {
                 {this.twitter}
                 {this.instagram}
                 {this.linkedIn}
-                <i className="far fa-copyright" />
-                {this.name}
+                <div className="footer-copyright">
+                    <div className="footer-copyright-icon">
+                        <FontAwesomeIcon icon={['far', 'copyright']} />
+                    </div>
+                    <div className="footer-copyright-name">
+                        {this.name}
+                    </div>
+                </div>
             </div>
         );
     }
