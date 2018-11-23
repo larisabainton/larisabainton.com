@@ -1,10 +1,14 @@
+import Parser from 'html-react-parser';
 import React from 'react';
 
 class Gallery extends React.Component {
-    constructor({ title, text }) {
+    constructor({
+        title, text, videos,
+    }) {
         super();
         this.title = title;
         this.text = text;
+        this.videos = videos;
     }
 
     render() {
@@ -17,7 +21,9 @@ class Gallery extends React.Component {
                     <div className="gallery-text">
                         {this.text}
                     </div>
-                    <div className="gallery-images" />
+                    <div className="gallery-videos">
+                        {Parser(this.videos)}
+                    </div>
                 </div>
             </div>
         );
