@@ -2,8 +2,11 @@
     "name": "gatsby-starter-default",
     "description": "Larisa Bainton",
     "version": "1.0.0",
-    "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+    "author": "Larisa Bainton",
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.8",
+        "@fortawesome/free-brands-svg-icons": "^5.5.0",
+        "@fortawesome/react-fontawesome": "^0.1.3",
         "gatsby": "^1.9.247",
         "gatsby-link": "^1.6.40",
         "gatsby-plugin-react-helmet": "^2.0.10",
