@@ -1,20 +1,35 @@
 $base-color: rgb(229, 230, 231);
 $input-focus-color: #92c8eb;
-$message-button-color: #98c593;
-$message-button-hover-color: #6a8966;
-$message-button-active-color: #2d3b2c;
+$message-button-color: #e4c878;
+$message-button-hover-color: #caa43f;
+$message-button-active-color: #bb8542;
 
 .contact {
+    display: flex;
+    color: white;
+}
+
+.contact .image {
     background-image: url('../images/06.jpg');
+    height: inherit;
+    width: 100%;
+    position: absolute;
 }
 
 .contact .content {
-    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .contact-form {
     background-color: white;
-    margin: 25px;
+    margin: 25px 15%;
     color: $base-color;
     padding: 2em;
 
@@ -27,10 +42,10 @@ $message-button-active-color: #2d3b2c;
     textarea {
         width: inherit;
         font-size: 1em;
+        font-family: $roboto;
         text-align: left;
         padding: 10px;
         margin: 5px;
-        border-radius: 10px;
         border: 2px $base-color solid;
 
         &:focus {
