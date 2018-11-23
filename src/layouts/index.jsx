@@ -1,10 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+    faTwitter,
+    faFacebookF,
+    faLinkedinIn,
+    faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../style/main.scss';
+
+library.add(faTwitter, faFacebookF, faLinkedinIn, faInstagram);
 
 const getUrlForLink = (name, links) => {
     const matchingLink = links.find(link => link.name === name);
