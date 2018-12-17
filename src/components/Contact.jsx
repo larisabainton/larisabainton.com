@@ -19,9 +19,9 @@ class Contact extends React.Component {
                         {this.text}
                     </div>
                     <div className="contact-form">
-                        <form method="post">
+                        <form action="https://formspree.io/larisabainton@gmail.com" method="post">
                             <input type="text" name="name" placeholder="Name" />
-                            <input type="email" name="email" placeholder="Email" />
+                            <input type="text" name="email" placeholder="Email" />
                             <textarea name="message" placeholder="Message" rows="6" />
                             <input className="send-message" type="submit" value="Send Message" />
                         </form>
