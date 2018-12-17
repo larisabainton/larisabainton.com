@@ -1,0 +1,32 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "larisabaintoncom-20181203215151-authRole",
+			"UnauthRoleArn": "arn:aws:iam::071423049387:role/larisabaintoncom-20181203215151-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::071423049387:role/larisabaintoncom-20181203215151-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "larisabaintoncom-20181203215151-deployment",
+			"UnauthRoleName": "larisabaintoncom-20181203215151-unauthRole",
+			"StackName": "larisabaintoncom-20181203215151",
+			"StackId": "arn:aws:cloudformation:us-east-1:071423049387:stack/larisabaintoncom-20181203215151/8fa33af0-f76f-11e8-875c-127a71eef55e"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/larisabaintoncom-20181203215151-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2018-12-04T02:54:36.685Z",
+			"output": {
+				"S3BucketSecureURL": "https://larisabainton.com.s3.amazonaws.com",
+				"WebsiteURL": "http://larisabainton.com.s3-website-us-east-1.amazonaws.com",
+				"Region": "us-east-1",
+				"HostingBucketName": "larisabainton.com"
+			},
+			"lastPushDirHash": "Bjq95PvcZ5oWBEBmZod70FlM5kA="
+		}
+	}
+}
